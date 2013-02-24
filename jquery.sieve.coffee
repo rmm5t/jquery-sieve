@@ -1,6 +1,6 @@
 ###
 Table Filtering and Search for jQuery
-version: 0.1.0
+version: 0.1.1
 
 Licensed under the MIT:
 http://www.opensource.org/licenses/mit-license.php
@@ -9,18 +9,16 @@ Copyright 2013 Ryan McGeary
 ###
 $ = jQuery
 $.fn.sieve = (options) ->
-
-  settings = $.extend({
-    searchInput: null
-    searchTemplate: "<div><label>Search: <input type='text'></label></div>"
-    rowSelector: "tr:not(:has('th'))"
-    cellSelector: "td"
-  }, options)
-
   compact = (array) -> item for item in array when item
 
   this.each ->
     table = $(this)
+    settings = $.extend({
+      searchInput: null
+      searchTemplate: "<div><label>Search: <input type='text'></label></div>"
+      rowSelector: "tr:not(:has('th'))"
+      cellSelector: "td"
+    }, options)
 
     if !settings.searchInput
       searchBar = $(settings.searchTemplate)
