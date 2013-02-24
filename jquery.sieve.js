@@ -16,11 +16,12 @@ Copyright 2013 Ryan McGeary
 
   $ = jQuery;
 
-  $.fn.tableSieve = function(options) {
+  $.fn.sieve = function(options) {
     var compact, settings;
     settings = $.extend({
       searchInput: null,
       searchTemplate: "<div><label>Search: <input type='text'></label></div>",
+      rowSelector: "tr:not(:has('th'))",
       cellSelector: "td"
     }, options);
     compact = function(array) {
@@ -45,7 +46,7 @@ Copyright 2013 Ryan McGeary
       return settings.searchInput.on("keyup", function() {
         var query, rows;
         query = compact($(this).val().toLowerCase().split(/\s+/));
-        rows = table.find("tr:not(:has('th'))");
+        rows = table.find(settings.rowSelector);
         return rows.each(function() {
           var cells, matches, q, row, text, _i, _len;
           row = $(this);

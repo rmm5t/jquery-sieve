@@ -8,11 +8,12 @@ http://www.opensource.org/licenses/mit-license.php
 Copyright 2013 Ryan McGeary
 ###
 $ = jQuery
-$.fn.tableSieve = (options) ->
+$.fn.sieve = (options) ->
 
   settings = $.extend({
     searchInput: null
     searchTemplate: "<div><label>Search: <input type='text'></label></div>"
+    rowSelector: "tr:not(:has('th'))"
     cellSelector: "td"
   }, options)
 
@@ -28,7 +29,7 @@ $.fn.tableSieve = (options) ->
 
     settings.searchInput.on "keyup", ->
       query = compact($(this).val().toLowerCase().split(/\s+/))
-      rows = table.find("tr:not(:has('th'))")
+      rows = table.find(settings.rowSelector)
 
       rows.each ->
         row = $(this)
