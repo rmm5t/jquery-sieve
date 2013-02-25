@@ -1,6 +1,6 @@
 ###
 Table and Container Filtering and Search for jQuery
-version: 0.2.1
+version: 0.2.2
 
 Licensed under the MIT:
 http://www.opensource.org/licenses/mit-license.php
