@@ -7,10 +7,17 @@
 <body>
   <div class="container">
     <h1>jquery.sieve demo</h1>
+    <p>
+      This page demonstrates the basic functionality of
+      the <a href="https://github.com/rmm5t/jquery-sieve" tabindex="-1">Sieve
+      jQuery plugin</a>. Start typing in one of the search fields to filter
+      the associated datasets.
+    </p>
     <div class="row">
-      <div class="span5">
+      <div class="span4">
+        <h3>US President Birthplaces</h2>
         <div id="presidents">
-          <table class="table table-hover table-bordered sieve">
+          <table class="table table-hover table-bordered table-sieve">
             <thead>
               <tr>
                 <th>President</th>
@@ -66,9 +73,340 @@
         </div>
       </div>
 
-      <div class="span5 offset1">
+      <div class="span4">
+        <h3>Good Quotes <small>[<a href="http://www.cs.virginia.edu/~robins/quotes.html" tabindex="-1">source</a>]</small></h2>
+        <div id="paragraphs" class="p-sieve">
+          <p><em>"Moral indignation is jealousy with a halo."</em> - <strong>H. G. Wells (1866-1946)</strong></p>
+          <p><em>"Glory is fleeting, but obscurity is forever."</em> - <strong>Napoleon Bonaparte (1769-1821)</strong></p>
+          <p><em>"The fundamental cause of trouble in the world is that the stupid are cocksure while the intelligent are full of doubt."</em> - <strong>Bertrand Russell (1872-1970)</strong></p>
+          <p><em>"Victory goes to the player who makes the next-to-last mistake."</em> - <strong>Chessmaster Savielly Grigorievitch Tartakower (1887-1956)</strong></p>
+          <p><em>"Don't be so humble - you are not that great."</em> - <strong>Golda Meir (1898-1978) to a visiting diplomat</strong></p>
+          <p><em>"His ignorance is encyclopedic"</em> - <strong>Abba Eban (1915-2002)</strong></p>
+          <p><em>"If a man does his best, what else is there?"</em> - <strong>General George S. Patton (1885-1945)</strong></p>
+          <p><em>"Political correctness is tyranny with manners."</em> - <strong>Charlton Heston (1924-2008)</strong></p>
+          <p><em>"You can avoid reality, but you cannot avoid the consequences of avoiding reality."</em> - <strong>Ayn Rand (1905-1982)</strong></p>
+          <p><em>"When one person suffers from a delusion it is called insanity; when many people suffer from a delusion it is called religion."</em> - <strong>Robert Pirsig (1948-)</strong></p>
+          <p><em>"Sex and religion are closer to each other than either might prefer."</em> - <strong>Saint Thomas More (1478-1535)</strong></p>
+          <p><em>"I can write better than anybody who can write faster, and I can write faster than anybody who can write better."</em> - <strong>A. J. Liebling (1904-1963)</strong></p>
+          <p><em>"People demand freedom of speech to make up for the freedom of thought which they avoid."</em> - <strong>Soren Aabye Kierkegaard (1813-1855)</strong></p>
+          <p><em>"Give me chastity and continence, but not yet."</em> - <strong>Saint Augustine (354-430)</strong></p>
+          <p><em>"Not everything that can be counted counts, and not everything that counts can be counted."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"Only two things are infinite, the universe and human stupidity, and I'm not sure about the former."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"A lie gets halfway around the world before the truth has a chance to get its pants on."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"You may not be interested in war, but war is interested in you."</em> - <strong>Leon Trotsky (1879-1940)</strong></p>
+          <p><em>"I do not feel obliged to believe that the same God who has endowed us with sense, reason, and intellect has intended us to forgo their use."</em> - <strong>Galileo Galilei (1564-1642)</strong></p>
+          <p><em>"We are all atheists about most of the gods humanity has ever believed in. Some of us just go one god further."</em> - <strong>Richard Dawkins (1941-)</strong></p>
+          <p><em>"The artist is nothing without the gift, but the gift is nothing without work."</em> - <strong>Emile Zola (1840-1902)</strong></p>
+          <p><em>"This book fills a much-needed gap."</em> - <strong>Moses Hadas (1900-1966) in a review</strong></p>
+          <p><em>"The full use of your powers along lines of excellence."</em> - <strong>definition of "happiness"</em> by John F. Kennedy (1917-1963)</strong></p>
+          <p><em>"I'm living so far beyond my income that we may almost be said to be living apart."</em> - <strong>e e cummings (1894-1962)</strong></p>
+          <p><em>"Give me a museum and I'll fill it."</em> - <strong>Pablo Picasso (1881-1973)</strong></p>
+          <p><em>"Assassins!"</em> - <strong>Arturo Toscanini (1867-1957) to his orchestra</strong></p>
+          <p><em>"I'll moider da bum."</em> - <strong>Heavyweight boxer Tony Galento, when asked what he thought of William Shakespeare</strong></p>
+          <p><em>"In theory, there is no difference between theory and practice. But in practice, there is."</em> - <strong>Yogi Berra</strong></p>
+          <p><em>"I find that the harder I work, the more luck I seem to have."</em> - <strong>Thomas Jefferson (1743-1826)</strong></p>
+          <p><em>"Each problem that I solved became a rule which served afterwards to solve other problems."</em> - <strong>Rene Descartes (1596-1650), "Discours de la Methode"</strong></p>
+          <p><em>"In the End, we will remember not the words of our enemies, but the silence of our friends."</em> - <strong>Martin Luther King Jr. (1929-1968)</strong></p>
+          <p><em>"Whether you think that you can, or that you can't, you are usually right."</em> - <strong>Henry Ford (1863-1947)</strong></p>
+          <p><em>"Do, or do not. There is no 'try'."</em> - <strong>Yoda ('The Empire Strikes Back')</strong></p>
+          <p><em>"The only way to get rid of a temptation is to yield to it."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"Don't stay in bed, unless you can make money in bed."</em> - <strong>George Burns (1896-1996)</strong></p>
+          <p><em>"I don't know why we are here, but I'm pretty sure that it is not in order to enjoy ourselves."</em> - <strong>Ludwig Wittgenstein (1889-1951)</strong></p>
+          <p><em>"There are no facts, only interpretations."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"Nothing in the world is more dangerous than sincere ignorance and conscientious stupidity."</em> - <strong>Martin Luther King Jr. (1929-1968)</strong></p>
+          <p><em>"The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense."</em> - <strong>Edsgar Dijkstra (1930-2002)</strong></p>
+          <p><em>"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows away your whole leg."</em> - <strong>Bjarne Stroustrup</strong></p>
+          <p><em>"A mathematician is a device for turning coffee into theorems."</em> - <strong>Paul Erdos (1913-1996)</strong></p>
+          <p><em>"Problems worthy of attack prove their worth by fighting back."</em> - <strong>Paul Erdos (1913-1996)</strong></p>
+          <p><em>"Try to learn something about everything and everything about something."</em> - <strong>Thomas Henry Huxley (1825-1895)</strong></p>
+          <p><em>"Dancing is silent poetry."</em> - <strong>Simonides (556-468bc)</strong></p>
+          <p><em>"The only difference between me and a madman is that I'm not mad."</em> - <strong>Salvador Dali (1904-1989)</strong></p>
+          <p><em>"If you can't get rid of the skeleton in your closet, you'd best teach it to dance."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"But at my back I always hear Time's winged chariot hurrying near."</em> - <strong>Andrew Marvell (1621-1678)</strong></p>
+          <p><em>"Good people do not need laws to tell them to act responsibly, while bad people will find a way around the laws."</em> - <strong>Plato (427-347 B.C.)</strong></p>
+          <p><em>"The power of accurate observation is frequently called cynicism by those who don't have it."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"Whenever I climb I am followed by a dog called 'Ego'."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"Everybody pities the weak; jealousy you have to earn."</em> - <strong>Arnold Schwarzenegger (1947-)</strong></p>
+          <p><em>"Against stupidity, the gods themselves contend in vain."</em> - <strong>Friedrich von Schiller (1759-1805)</strong></p>
+          <p><em>"We have art to save ourselves from the truth."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"Never interrupt your enemy when he is making a mistake."</em> - <strong>Napoleon Bonaparte (1769-1821)</strong></p>
+          <p><em>"I think 'Hail to the Chief' has a nice ring to it."</em> - <strong>John F. Kennedy (1917-1963) when asked what is his favorite song</strong></p>
+          <p><em>"I have nothing to declare except my genius."</em> - <strong>Oscar Wilde (1854-1900) upon arriving at U.S. customs 1882</strong></p>
+          <p><em>"Human history becomes more and more a race between education and catastrophe."</em> - <strong>H. G. Wells (1866-1946)</strong></p>
+          <p><em>"Talent does what it can; genius does what it must."</em> - <strong>Edward George Bulwer-Lytton (1803-1873)</strong></p>
+          <p><em>"The difference between 'involvement' and 'commitment' is like an eggs-and-ham breakfast: the chicken was 'involved' - the pig was 'committed'."</em> - <strong>unknown</strong></p>
+          <p><em>"Women might be able to fake orgasms. But men can fake a whole relationship."</em> - <strong>Sharon Stone</strong></p>
+          <p><em>"If you are going through hell, keep going."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"He who has a 'why' to live, can bear with almost any 'how'."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"Many wealthy people are little more than janitors of their possessions."</em> - <strong>Frank Lloyd Wright (1868-1959)</strong></p>
+          <p><em>"I'm all in favor of keeping dangerous weapons out of the hands of fools. Let's start with typewriters."</em> - <strong>Frank Lloyd Wright (1868-1959)</strong></p>
+          <p><em>"Some cause happiness wherever they go; others, whenever they go."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"God is a comedian playing to an audience too afraid to laugh."</em> - <strong>Voltaire (1694-1778)</strong></p>
+          <p><em>"He is one of those people who would be enormously improved by death."</em> - <strong>H. H. Munro (Saki) (1870-1916)</strong></p>
+          <p><em>"I am ready to meet my Maker. Whether my Maker is prepared for the great ordeal of meeting me is another matter."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"I shall not waste my days in trying to prolong them."</em> - <strong>Ian L. Fleming (1908-1964)</strong></p>
+          <p><em>"If you can count your money, you don't have a billion dollars."</em> - <strong>J. Paul Getty (1892-1976)</strong></p>
+          <p><em>"Facts are the enemy of truth."</em> - <strong>Don Quixote - "Man of La Mancha"</strong></p>
+          <p><em>"When you do the common things in life in an uncommon way, you will command the attention of the world."</em> - <strong>George Washington Carver (1864-1943)</strong></p>
+          <p><em>"How wrong it is for a woman to expect the man to build the world she wants, rather than to create it herself."</em> - <strong>Anais Nin (1903-1977)</strong></p>
+          <p><em>"I have not failed. I've just found 10,000 ways that won't work."</em> - <strong>Thomas Alva Edison (1847-1931)</strong></p>
+          <p><em>"I begin by taking. I shall find scholars later to demonstrate my perfect right."</em> - <strong>Frederick (II) the Great</strong></p>
+          <p><em>"Maybe this world is another planet's Hell."</em> - <strong>Aldous Huxley (1894-1963)</strong></p>
+          <p><em>"Blessed is the man, who having nothing to say, abstains from giving wordy evidence of the fact."</em> - <strong>George Eliot (1819-1880)</strong></p>
+          <p><em>"Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth."</em> - <strong>Sherlock Holmes (by Sir Arthur Conan Doyle, 1859-1930)</strong></p>
+          <p><em>"Black holes are where God divided by zero."</em> - <strong>Steven Wright</strong></p>
+          <p><em>"I've had a wonderful time, but this wasn't it."</em> - <strong>Groucho Marx (1895-1977)</strong></p>
+          <p><em>"It's kind of fun to do the impossible."</em> - <strong>Walt Disney (1901-1966)</strong></p>
+          <p><em>"We didn't lose the game; we just ran out of time."</em> - <strong>Vince Lombardi</strong></p>
+          <p><em>"The optimist proclaims that we live in the best of all possible worlds, and the pessimist fears this is true."</em> - <strong>James Branch Cabell</strong></p>
+          <p><em>"A friendship founded on business is better than a business founded on friendship."</em> - <strong>John D. Rockefeller (1874-1960)</strong></p>
+          <p><em>"All are lunatics, but he who can analyze his delusion is called a philosopher."</em> - <strong>Ambrose Bierce (1842-1914)</strong></p>
+          <p><em>"You can only find truth with logic if you have already found truth without it."</em> - <strong>Gilbert Keith Chesterton (1874-1936)</strong></p>
+          <p><em>"An inconvenience is only an adventure wrongly considered; an adventure is an inconvenience rightly considered."</em> - <strong>Gilbert Keith Chesterton (1874-1936)</strong></p>
+          <p><em>"I have come to believe that the whole world is an enigma, a harmless enigma that is made terrible by our own mad attempt to interpret it as though it had an underlying truth."</em> - <strong>Umberto Eco</strong></p>
+          <p><em>"Be nice to people on your way up because you meet them on your way down."</em> - <strong>Jimmy Durante</strong></p>
+          <p><em>"The true measure of a man is how he treats someone who can do him absolutely no good."</em> - <strong>Samuel Johnson (1709-1784)</strong></p>
+          <p><em>"A people that values its privileges above its principles soon loses both."</em> - <strong>Dwight D. Eisenhower (1890-1969), Inaugural Address, January 20, 1953</strong></p>
+          <p><em>"The significant problems we face cannot be solved at the same level of thinking we were at when we created them."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"Basically, I no longer work for anything but the sensation I have while working."</em> - <strong>Albert Giacometti (sculptor)</strong></p>
+          <p><em>"There's a limit to how many times you can read how great you are and what an inspiration you are, but I'm not there yet."</em> - <strong>Randy Pausch (1960-2008)</strong></p>
+          <p><em>"It is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring."</em> - <strong>Carl Sagan (1934-1996)</strong></p>
+          <p><em>"All truth passes through three stages. First, it is ridiculed. Second, it is violently opposed. Third, it is accepted as being self-evident."</em> - <strong>Arthur Schopenhauer (1788-1860)</strong></p>
+          <p><em>"Many a man's reputation would not know his character if they met on the street."</em> - <strong>Elbert Hubbard (1856-1915)</strong></p>
+          <p><em>"There is more stupidity than hydrogen in the universe, and it has a longer shelf life."</em> - <strong>Frank Zappa</strong></p>
+          <p><em>"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."</em> - <strong>Antoine de Saint Exupery</strong></p>
+          <p><em>"Life is pleasant. Death is peaceful. It's the transition that's troublesome."</em> - <strong>Isaac Asimov</strong></p>
+          <p><em>"If you want to make an apple pie from scratch, you must first create the universe."</em> - <strong>Carl Sagan (1934-1996)</strong></p>
+          <p><em>"It is much more comfortable to be mad and know it, than to be sane and have one's doubts."</em> - <strong>G. B. Burgin</strong></p>
+          <p><em>"Once is happenstance. Twice is coincidence. Three times is enemy action."</em> - <strong>Auric Goldfinger, in "Goldfinger"</em> by Ian L. Fleming (1908-1964)</strong></p>
+          <p><em>"To love oneself is the beginning of a lifelong romance"</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"Knowledge speaks, but wisdom listens."</em> - <strong>Jimi Hendrix</strong></p>
+          <p><em>"A clever man commits no minor blunders."</em> - <strong>Goethe (1749-1832)</strong></p>
+          <p><em>"Argue for your limitations, and sure enough they're yours."</em> - <strong>Richard Bach</strong></p>
+          <p><em>"A witty saying proves nothing."</em> - <strong>Voltaire (1694-1778)</strong></p>
+          <p><em>"Sleep is an excellent way of listening to an opera."</em> - <strong>James Stephens (1882-1950)</strong></p>
+          <p><em>"The nice thing about being a celebrity is that if you bore people they think it's their fault."</em> - <strong>Henry Kissinger (1923-)</strong></p>
+          <p><em>"Education is a progressive discovery of our own ignorance."</em> - <strong>Will Durant</strong></p>
+          <p><em>"I have often regretted my speech, never my silence."</em> - <strong>Xenocrates (396-314 B.C.)</strong></p>
+          <p><em>"It was the experience of mystery -- even if mixed with fear -- that engendered religion."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"If everything seems under control, you're just not going fast enough."</em> - <strong>Mario Andretti</strong></p>
+          <p><em>"I do not consider it an insult, but rather a compliment to be called an agnostic. I do not pretend to know where many ignorant men are sure -- that is all that agnosticism means."</em> - <strong>Clarence Darrow, Scopes trial, 1925.</strong></p>
+          <p><em>"Obstacles are those frightful things you see when you take your eyes off your goal."</em> - <strong>Henry Ford (1863-1947)</strong></p>
+          <p><em>"I'll sleep when I'm dead."</em> - <strong>Warren Zevon (1947-2003)</strong></p>
+          <p><em>"There are people in the world so hungry, that God cannot appear to them except in the form of bread."</em> - <strong>Mahatma Gandhi (1869-1948)</strong></p>
+          <p><em>"When you gaze long into the abyss, the abyss also gazes into you."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"The instinct of nearly all societies is to lock up anybody who is truly free. First, society begins by trying to beat you up. If this fails, they try to poison you. If this fails too, they finish by loading honors on your head."</em> - <strong>Jean Cocteau (1889-1963)</strong></p>
+          <p><em>"Everyone is a genius at least once a year; a real genius has his original ideas closer together."</em> - <strong>Georg Lichtenberg (1742-1799)</strong></p>
+          <p><em>"Success usually comes to those who are too busy to be looking for it"</em> - <strong>Henry David Thoreau (1817-1862)</strong></p>
+          <p><em>"While we are postponing, life speeds by."</em> - <strong>Seneca (3BC - 65AD)</strong></p>
+          <p><em>"Where are we going, and why am I in this handbasket?"</em> - <strong>Bumper Sticker</strong></p>
+          <p><em>"God, please save me from your followers!"</em> - <strong>Bumper Sticker</strong></p>
+          <p><em>"Fill what's empty, empty what's full, and scratch where it itches."</em> - <strong>the Duchess of Windsor, when asked what is the secret of a long and happy life</strong></p>
+          <p><em>"First they ignore you, then they laugh at you, then they fight you, then you win."</em> - <strong>Mahatma Gandhi (1869-1948)</strong></p>
+          <p><em>"Luck is the residue of design."</em> - <strong>Branch Rickey - former owner of the Brooklyn Dodger Baseball Team</strong></p>
+          <p><em>"Tragedy is when I cut my finger. Comedy is when you walk into an open sewer and die."</em> - <strong>Mel Brooks</strong></p>
+          <p><em>"Most people would sooner die than think; in fact, they do so."</em> - <strong>Bertrand Russell (1872-1970)</strong></p>
+          <p><em>"Wit is educated insolence."</em> - <strong>Aristotle (384-322 B.C.)</strong></p>
+          <p><em>"My advice to you is get married: if you find a good wife you'll be happy; if not, you'll become a philosopher."</em> - <strong>Socrates (470-399 B.C.)</strong></p>
+          <p><em>"Advice is what we ask for when we already know the answer but wish we didn't"</em> - <strong>Erica Jong (1942-)</strong></p>
+          <p><em>"Show me a woman who doesn't feel guilty and I'll show you a man."</em> - <strong>Erica Jong (1942-)</strong></p>
+          <p><em>"I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."</em> - <strong>Maya Angelou (1928-)</strong></p>
+          <p><em>"Egotist: a person more interested in himself than in me."</em> - <strong>Ambrose Bierce (1842-1914)</strong></p>
+          <p><em>"A narcissist is someone better looking than you are."</em> - <strong>Gore Vidal</strong></p>
+          <p><em>"Wise men make proverbs, but fools repeat them."</em> - <strong>Samuel Palmer (1805-80)</strong></p>
+          <p><em>"It has become appallingly obvious that our technology has exceeded our humanity."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"The secret of success is to know something nobody else knows."</em> - <strong>Aristotle Onassis (1906-1975)</strong></p>
+          <p><em>"Sometimes when reading Goethe I have the paralyzing suspicion that he is trying to be funny."</em> - <strong>Guy Davenport</strong></p>
+          <p><em>"When you have to kill a man, it costs nothing to be polite."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"Any man who is under 30, and is not a liberal, has no heart; and any man who is over 30, and is not a conservative, has no brains."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"The opposite of a correct statement is a false statement. The opposite of a profound truth may well be another profound truth."</em> - <strong>Niels Bohr (1885-1962)</strong></p>
+          <p><em>"We all agree that your theory is crazy, but is it crazy enough?"</em> - <strong>Niels Bohr (1885-1962)</strong></p>
+          <p><em>"When I am working on a problem I never think about beauty. I only think about how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong."</em> - <strong>Buckminster Fuller (1895-1983)</strong></p>
+          <p><em>"In science one tries to tell people, in such a way as to be understood by everyone, something that no one ever knew before. But in poetry, it's the exact opposite."</em> - <strong>Paul Dirac (1902-1984)</strong></p>
+          <p><em>"I would have made a good Pope."</em> - <strong>Richard M. Nixon (1913-1994)</strong></p>
+          <p><em>"In any contest between power and patience, bet on patience."</em> - <strong>W.B. Prescott</strong></p>
+          <p><em>"Anyone who considers arithmetical methods of producing random digits is, of course, in a state of sin."</em> - <strong>John von Neumann (1903-1957)</strong></p>
+          <p><em>"The mistakes are all waiting to be made."</em> - <strong>chessmaster Savielly Grigorievitch Tartakower (1887-1956) on the game's opening position</strong></p>
+          <p><em>"It is unbecoming for young men to utter maxims."</em> - <strong>Aristotle (384-322 B.C.)</strong></p>
+          <p><em>"Grove giveth and Gates taketh away."</em> - <strong>Bob Metcalfe (inventor of Ethernet) on the trend of hardware speedups not being able to keep up with software demands</strong></p>
+          <p><em>"Reality is merely an illusion, albeit a very persistent one."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"One of the symptoms of an approaching nervous breakdown is the belief that one's work is terribly important."</em> - <strong>Bertrand Russell (1872-1970)</strong></p>
+          <p><em>"A little inaccuracy sometimes saves a ton of explanation."</em> - <strong>H. H. Munro (Saki) (1870-1916)</strong></p>
+          <p><em>"There are two ways of constructing a software design; one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult."</em> - <strong>C. A. R. Hoare</strong></p>
+          <p><em>"Make everything as simple as possible, but not simpler."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+          <p><em>"What do you take me for, an idiot?"</em> - <strong>General Charles de Gaulle (1890-1970), when a journalist asked him if he was happy</strong></p>
+          <p><em>"I heard someone tried the monkeys-on-typewriters bit trying for the plays of W. Shakespeare, but all they got was the collected works of Francis Bacon."</em> - <strong>Bill Hirst</strong></p>
+          <p><em>"Three o'clock is always too late or too early for anything you want to do."</em> - <strong>Jean-Paul Sartre (1905-1980)</strong></p>
+          <p><em>"A doctor can bury his mistakes but an architect can only advise his clients to plant vines."</em> - <strong>Frank Lloyd Wright (1868-1959)</strong></p>
+          <p><em>"It is dangerous to be sincere unless you are also stupid."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"If you haven't got anything nice to say about anybody, come sit next to me."</em> - <strong>Alice Roosevelt Longworth (1884-1980)</strong></p>
+          <p><em>"A man can't be too careful in the choice of his enemies."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"Forgive your enemies, but never forget their names."</em> - <strong>John F. Kennedy (1917-1963)</strong></p>
+          <p><em>"Logic is in the eye of the logician."</em> - <strong>Gloria Steinem</strong></p>
+          <p><em>"No one can earn a million dollars honestly."</em> - <strong>William Jennings Bryan (1860-1925)</strong></p>
+          <p><em>"Everything has been figured out, except how to live."</em> - <strong>Jean-Paul Sartre (1905-1980)</strong></p>
+          <p><em>"Well-timed silence hath more eloquence than speech."</em> - <strong>Martin Fraquhar Tupper</strong></p>
+          <p><em>"Thank you for sending me a copy of your book - I'll waste no time reading it."</em> - <strong>Moses Hadas (1900-1966)</strong></p>
+          <p><em>"From the moment I picked your book up until I laid it down I was convulsed with laughter. Some day I intend reading it."</em> - <strong>Groucho Marx (1895-1977)</strong></p>
+          <p><em>"It is better to have a permanent income than to be fascinating."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"When ideas fail, words come in very handy."</em> - <strong>Goethe (1749-1832)</strong></p>
+          <p><em>"In the end, everything is a gag."</em> - <strong>Charlie Chaplin (1889-1977)</strong></p>
+          <p><em>"The nice thing about egotists is that they don't talk about other people."</em> - <strong>Lucille S. Harper</strong></p>
+          <p><em>"You got to be careful if you don't know where you're going, because you might not get there."</em> - <strong>Yogi Berra</strong></p>
+          <p><em>"I love Mickey Mouse more than any woman I have ever known."</em> - <strong>Walt Disney (1901-1966)</strong></p>
+          <p><em>"He who hesitates is a damned fool."</em> - <strong>Mae West (1892-1980)</strong></p>
+          <p><em>"Good teaching is one-fourth preparation and three-fourths theater."</em> - <strong>Gail Godwin</strong></p>
+          <p><em>"University politics are vicious precisely because the stakes are so small."</em> - <strong>Henry Kissinger (1923-)</strong></p>
+          <p><em>"The graveyards are full of indispensable men."</em> - <strong>Charles de Gaulle (1890-1970)</strong></p>
+          <p><em>"You can pretend to be serious; you can't pretend to be witty."</em> - <strong>Sacha Guitry (1885-1957)</strong></p>
+          <p><em>"Behind every great fortune there is a crime."</em> - <strong>Honore de Balzac (1799-1850)</strong></p>
+          <p><em>"If women didn't exist, all the money in the world would have no meaning."</em> - <strong>Aristotle Onassis (1906-1975)</strong></p>
+          <p><em>"I am not young enough to know everything."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"Bigamy is having one wife too many. Monogamy is the same."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"The object of war is not to die for your country but to make the other bastard die for his."</em> - <strong>General George Patton (1885-1945)</strong></p>
+          <p><em>"Sometimes a scream is better than a thesis."</em> - <strong>Ralph Waldo Emerson (1803-1882)</strong></p>
+          <p><em>"There is no sincerer love than the love of food."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"I don't even butter my bread; I consider that cooking."</em> - <strong>Katherine Cebrian</strong></p>
+          <p><em>"I have an existential map; it has 'you are here' written all over it."</em> - <strong>Steven Wright</strong></p>
+          <p><em>"Mr. Wagner has beautiful moments but bad quarters of an hour."</em> - <strong>Gioacchino Rossini (1792-1868)</strong></p>
+          <p><em>"Manuscript: something submitted in haste and returned at leisure."</em> - <strong>Oliver Herford (1863-1935)</strong></p>
+          <p><em>"I have read your book and much like it."</em> - <strong>Moses Hadas (1900-1966)</strong></p>
+          <p><em>"The covers of this book are too far apart."</em> - <strong>Ambrose Bierce (1842-1914)</strong></p>
+          <p><em>"Everywhere I go I'm asked if I think the university stifles writers. My opinion is that they don't stifle enough of them."</em> - <strong>Flannery O'Connor (1925-1964)</strong></p>
+          <p><em>"Too many pieces of music finish too long after the end."</em> - <strong>Igor Stravinsky (1882-1971)</strong></p>
+          <p><em>"Anything that is too stupid to be spoken is sung."</em> - <strong>Voltaire (1694-1778)</strong></p>
+          <p><em>"When choosing between two evils, I always like to try the one I've never tried before."</em> - <strong>Mae West (1892-1980)</strong></p>
+          <p><em>"I don't know anything about music. In my line you don't have to."</em> - <strong>Elvis Presley (1935-1977)</strong></p>
+          <p><em>"No Sane man will dance."</em> - <strong>Cicero (106-43 B.C.)</strong></p>
+          <p><em>"Hell is a half-filled auditorium."</em> - <strong>Robert Frost (1874-1963)</strong></p>
+          <p><em>"Show me a sane man and I will cure him for you."</em> - <strong>Carl Gustav Jung (1875-1961)</strong></p>
+          <p><em>"Vote early and vote often."</em> - <strong>Al Capone (1899-1947)</strong></p>
+          <p><em>"If I were two-faced, would I be wearing this one?"</em> - <strong>Abraham Lincoln (1809-1865)</strong></p>
+          <p><em>"Few things are harder to put up with than a good example."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"Hell is other people."</em> - <strong>Jean-Paul Sartre (1905-1980)</strong></p>
+          <p><em>"Now I am become death, the destroyer of worlds."</em> - <strong>Robert J. Oppenheimer (1904-1967) (citing from the Bhagavad Gita, after witnessing the world's first nuclear explosion)</strong></p>
+          <p><em>"Happiness is good health and a bad memory."</em> - <strong>Ingrid Bergman (1917-1982)</strong></p>
+          <p><em>"Friends may come and go, but enemies accumulate."</em> - <strong>Thomas Jones</strong></p>
+          <p><em>"You can get more with a kind word and a gun than you can with a kind word alone."</em> - <strong>Al Capone (1899-1947)</strong></p>
+          <p><em>"The gods too are fond of a joke."</em> - <strong>Aristotle (384-322 B.C.)</strong></p>
+          <p><em>"Distrust any enterprise that requires new clothes."</em> - <strong>Henry David Thoreau (1817-1862)</strong></p>
+          <p><em>"The difference between pornography and erotica is lighting."</em> - <strong>Gloria Leonard</strong></p>
+          <p><em>"It is time I stepped aside for a less experienced and less able man."</em> - <strong>Professor Scott Elledge on his retirement from Cornell</strong></p>
+          <p><em>"Every day I get up and look through the Forbes list of the richest people in America. If I'm not there, I go to work."</em> - <strong>Robert Orben</strong></p>
+          <p><em>"The cynics are right nine times out of ten."</em> - <strong>Henry Louis Mencken (1880-1956)</strong></p>
+          <p><em>"There are some experiences in life which should not be demanded twice from any man, and one of them is listening to the Brahms Requiem."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"And I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him."</em> - <strong>Revelation 6:8</strong></p>
+          <p><em>"Attention to health is life's greatest hindrance."</em> - <strong>Plato (427-347 B.C.)</strong></p>
+          <p><em>"Plato was a bore."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"Nietzsche was stupid and abnormal."</em> - <strong>Leo Tolstoy (1828-1910)</strong></p>
+          <p><em>"I'm not going to get into the ring with Tolstoy."</em> - <strong>Ernest Hemingway (1899-1961)</strong></p>
+          <p><em>"Hemingway was a jerk."</em> - <strong>Harold Robbins</strong></p>
+          <p><em>"Men are not disturbed by things, but the view they take of things."</em> - <strong>Epictetus (55-135 A.D.)</strong></p>
+          <p><em>"What about things like bullets?"</em> - <strong>Herb Kimmel, Behavioralist, Professor of Psychology, upon hearing the above quote (1981)</strong></p>
+          <p><em>"How can I lose to such an idiot?"</em> - <strong>A shout from chessmaster Aaron Nimzovich (1886-1935)</strong></p>
+          <p><em>"Not only is there no God, but try finding a plumber on Sunday."</em> - <strong>Woody Allen (1935-)</strong></p>
+          <p><em>"I don't feel good."</em> - <strong>The last words of Luther Burbank (1849-1926)</strong></p>
+          <p><em>"Nothing is wrong with California that a rise in the ocean level wouldn't cure."</em> - <strong>Ross MacDonald (1915-1983)</strong></p>
+          <p><em>"Men have become the tools of their tools."</em> - <strong>Henry David Thoreau (1817-1862)</strong></p>
+          <p><em>"I have never let my schooling interfere with my education."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"It is now possible for a flight attendant to get a pilot pregnant."</em> - <strong>Richard J. Ferris, president of United Airlines</strong></p>
+          <p><em>"I never miss a chance to have sex or appear on television."</em> - <strong>Gore Vidal</strong></p>
+          <p><em>"I don't want to achieve immortality through my work; I want to achieve immortality through not dying."</em> - <strong>Woody Allen (1935-)</strong></p>
+          <p><em>"Men and nations behave wisely once they have exhausted all the other alternatives."</em> - <strong>Abba Eban (1915-2002)</strong></p>
+          <p><em>"A consensus means that everyone agrees to say collectively what no one believes individually."</em> - <strong>Abba Eban (1915-2002)</strong></p>
+          <p><em>"To sit alone with my conscience will be judgment enough for me."</em> - <strong>Charles William Stubbs</strong></p>
+          <p><em>"Sanity is a madness put to good uses."</em> - <strong>George Santayana (1863-1952)</strong></p>
+          <p><em>"Imitation is the sincerest form of television."</em> - <strong>Fred Allen (1894-1956)</strong></p>
+          <p><em>"Always do right- this will gratify some and astonish the rest."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"In America, anybody can be president. That's one of the risks you take."</em> - <strong>Adlai Stevenson (1900-1965)</strong></p>
+          <p><em>"Copy from one, it's plagiarism; copy from two, it's research."</em> - <strong>Wilson Mizner (1876-1933)</strong></p>
+          <p><em>"Why don't you write books people can read?"</em> - <strong>Nora Joyce to her husband James (1882-1941)</strong></p>
+          <p><em>"Some editors are failed writers, but so are most writers."</em> - <strong>T. S. Eliot (1888-1965)</strong></p>
+          <p><em>"Criticism is prejudice made plausible."</em> - <strong>Henry Louis Mencken (1880-1956)</strong></p>
+          <p><em>"It is better to be quotable than to be honest."</em> - <strong>Tom Stoppard</strong></p>
+          <p><em>"Being on the tightrope is living; everything else is waiting."</em> - <strong>Karl Wallenda</strong></p>
+          <p><em>"Opportunities multiply as they are seized."</em> - <strong>Sun Tzu</strong></p>
+          <p><em>"A scholar who cherishes the love of comfort is not fit to be deemed a scholar."</em> - <strong>Lao-Tzu (570?-490? BC)</strong></p>
+          <p><em>"</em> The best way to predict the future is to invent it."</em> - <strong>Alan Kay</strong></p>
+          <p><em>"Never mistake motion for action."</em> - <strong>Ernest Hemingway (1899-1961)</strong></p>
+          <p><em>"I contend that we are both atheists. I just believe in one fewer god than you do. When you understand why you dismiss all the other possible gods, you will understand why I dismiss yours."</em> - <strong>Sir Stephen Henry Roberts (1901-1971)</strong></p>
+          <p><em>"Hell is paved with good samaritans."</em> - <strong>William M. Holden</strong></p>
+          <p><em>"The longer I live the more I see that I am never wrong about anything, and that all the pains that I have so humbly taken to verify my notions have only wasted my time."</em> - <strong>George Bernard Shaw (1856-1950)</strong></p>
+          <p><em>"Silence is argument carried out by other means."</em> - <strong>Ernesto"Che"Guevara (1928-1967)</strong></p>
+          <p><em>"Well done is better than well said."</em> - <strong>Benjamin Franklin (1706-1790)</strong></p>
+          <p><em>"The average person thinks he isn't."</em> - <strong>Father Larry Lorenzoni</strong></p>
+          <p><em>"Heav'n hath no rage like love to hatred turn'd, Nor Hell a fury, like a woman scorn'd."</em> - <strong>William Congreve (1670-1729)</strong></p>
+          <p><em>"A husband is what is left of the lover after the nerve has been extracted."</em> - <strong>Helen Rowland (1876-1950)</strong></p>
+          <p><em>"Learning is what most adults will do for a living in the 21st century."</em> - <strong>Lewis Perelman</strong></p>
+          <p><em>"Dogma is the sacrifice of wisdom to consistency."</em> - <strong>Lewis Perelman</strong></p>
+          <p><em>"Sometimes it is not enough that we do our best; we must do what is required."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"The man who goes alone can start today; but he who travels with another must wait till that other is ready."</em> - <strong>Henry David Thoreau (1817-1862)</strong></p>
+          <p><em>"There is a country in Europe where multiple-choice tests are illegal."</em> - <strong>Sigfried Hulzer</strong></p>
+          <p><em>"Ask her to wait a moment - I am almost done."</em> - <strong>Carl Friedrich Gauss (1777-1855), while working, when informed that his wife is dying</strong></p>
+          <p><em>"A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"I think there is a world market for maybe five computers."</em> - <strong>Thomas Watson (1874-1956), Chairman of IBM, 1943</strong></p>
+          <p><em>"I think it would be a good idea."</em> - <strong>Mahatma Gandhi (1869-1948), when asked what he thought of Western civilization</strong></p>
+          <p><em>"The only thing necessary for the triumph of evil is for good men to do nothing."</em> - <strong>Edmund Burke (1729-1797)</strong></p>
+          <p><em>"I'm not a member of any organized political party, I'm a Democrat!"</em> - <strong>Will Rogers (1879-1935)</strong></p>
+          <p><em>"If stupidity got us into this mess, then why can't it get us out?"</em> - <strong>Will Rogers (1879-1935)</strong></p>
+          <p><em>"The backbone of surprise is fusing speed with secrecy."</em> - <strong>Von Clausewitz (1780-1831)</strong></p>
+          <p><em>"Democracy does not guarantee equality of conditions - it only guarantees equality of opportunity."</em> - <strong>Irving Kristol</strong></p>
+          <p><em>"There is no reason anyone would want a computer in their home."</em> - <strong>Ken Olson, president, chairman and founder of Digital Equipment Corp., 1977</strong></p>
+          <p><em>"The concept is interesting and well-formed, but in order to earn better than a 'C', the idea must be feasible."</em> - <strong>A Yale University management professor in response to student Fred Smith's paper proposing reliable overnight delivery service (Smith went on to found Federal Express Corp.)</strong></p>
+          <p><em>"Who the hell wants to hear actors talk?"</em> - <strong>H. M. Warner (1881-1958), founder of Warner Brothers, in 1927</strong></p>
+          <p><em>"We don't like their sound, and guitar music is on the way out."</em> - <strong>Decca Recording Co. rejecting the Beatles, 1962</strong></p>
+          <p><em>"Everything that can be invented has been invented."</em> - <strong>Charles H. Duell, Commissioner, U.S. Office of Patents, 1899</strong></p>
+          <p><em>"Denial ain't just a river in Egypt."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"A pint of sweat saves a gallon of blood."</em> - <strong>General George S. Patton (1885-1945)</strong></p>
+          <p><em>"After I'm dead I'd rather have people ask why I have no monument than why I have one."</em> - <strong>Cato the Elder (234-149 BC, AKA Marcus Porcius Cato)</strong></p>
+          <p><em>"He can compress the most words into the smallest idea of any man I know."</em> - <strong>Abraham Lincoln (1809-1865)</strong></p>
+          <p><em>"Don't let it end like this. Tell them I said something."</em> - <strong>last words of Pancho Villa (1877-1923)</strong></p>
+          <p><em>"The right to swing my fist ends where the other man's nose begins."</em> - <strong>Oliver Wendell Holmes (1841-1935)</strong></p>
+          <p><em>"The difference between fiction and reality? Fiction has to make sense."</em> - <strong>Tom Clancy</strong></p>
+          <p><em>"It's not the size of the dog in the fight, it's the size of the fight in the dog."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"It is better to be feared than loved, if you cannot be both."</em> - <strong>Niccolo Machiavelli (1469-1527), "The Prince"</strong></p>
+          <p><em>"Whatever is begun in anger ends in shame."</em> - <strong>Benjamin Franklin (1706-1790)</strong></p>
+          <p><em>"The President has kept all of the promises he intended to keep."</em> - <strong>Clinton aide George Stephanopolous speaking on Larry King Live</strong></p>
+          <p><em>"We're going to turn this team around 360 degrees."</em> - <strong>Jason Kidd, upon his drafting to the Dallas Mavericks</strong></p>
+          <p><em>"Half this game is ninety percent mental."</em> - <strong>Yogi Berra</strong></p>
+          <p><em>"There is only one nature - the division into science and engineering is a human imposition, not a natural one. Indeed, the division is a human failure; it reflects our limited capacity to comprehend the whole."</em> - <strong>Bill Wulf</strong></p>
+          <p><em>"There's many a bestseller that could have been prevented by a good teacher."</em> - <strong>Flannery O'Connor (1925-1964)</strong></p>
+          <p><em>"He has all the virtues I dislike and none of the vices I admire."</em> - <strong>Sir Winston Churchill (1874-1965)</strong></p>
+          <p><em>"Write drunk; edit sober."</em> - <strong>Ernest Hemingway (1899-1961)</strong></p>
+          <p><em>"I criticize by creation - not by finding fault."</em> - <strong>Cicero (106-43 B.C.)</strong></p>
+          <p><em>"Love is friendship set on fire."</em> - <strong>Jeremy Taylor</strong></p>
+          <p><em>"God gave men both a penis and a brain, but unfortunately not enough blood supply to run both at the same time."</em> - <strong>Robin Williams, commenting on the Clinton/Lewinsky affair</strong></p>
+          <p><em>"My occupation now, I suppose, is jail inmate."</em> - <strong>Unibomber Theodore Kaczynski, when asked in court what his current profession was</strong></p>
+          <p><em>"Woman was God's second mistake."</em> - <strong>Friedrich Nietzsche (1844-1900)</strong></p>
+          <p><em>"This isn't right, this isn't even wrong."</em> - <strong>Wolfgang Pauli (1900-1958), upon reading a young physicist's paper</strong></p>
+          <p><em>"For centuries, theologians have been explaining the unknowable in terms of the-not-worth-knowing."</em> - <strong>Henry Louis Mencken (1880-1956)</strong></p>
+          <p><em>"Pray, v.: To ask that the laws of the universe be annulled on behalf of a single petitioner confessedly unworthy."</em> - <strong>Ambrose Bierce (1842-1914)</strong></p>
+          <p><em>"Every normal man must be tempted at times to spit upon his hands, hoist the black flag, and begin slitting throats."</em> - <strong>Henry Louis Mencken (1880-1956)</strong></p>
+          <p><em>"Now, now my good man, this is no time for making enemies."</em> - <strong>Voltaire (1694-1778) on his deathbed in response to a priest asking that he renounce Satan.</strong></p>
+          <p><em>"Fill the unforgiving minute with sixty seconds worth of distance run."</em> - <strong>Rudyard Kipling (1865-1936)</strong></p>
+          <p><em>"He would make a lovely corpse."</em> - <strong>Charles Dickens (1812-1870)</strong></p>
+          <p><em>"I've just learned about his illness. Let's hope it's nothing trivial."</em> - <strong>Irvin S. Cobb</strong></p>
+          <p><em>"I worship the quicksand he walks in."</em> - <strong>Art Buchwald</strong></p>
+          <p><em>"Wagner's music is better than it sounds."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"A poem is never finished, only abandoned."</em> - <strong>Paul Valery (1871-1945)</strong></p>
+          <p><em>"We are not retreating - we are advancing in another Direction."</em> - <strong>General Douglas MacArthur (1880-1964)</strong></p>
+          <p><em>"If you were plowing a field, which would you rather use? Two strong oxen or 1024 chickens?"</em> - <strong>Seymour Cray (1925-1996), father of supercomputing</strong></p>
+          <p><em>"#3 pencils and quadrille pads."</em> - <strong>Seymoure Cray (1925-1996) when asked what CAD tools he used to design the Cray I supercomputer; he also recommended using the back side of the pages so that the grid lines were not so dominant.</strong></p>
+          <p><em>"Interesting - I use a Mac to help me design the next Cray."</em> - <strong>Seymoure Cray (1925-1996) when he was told that Apple Inc. had recently bought a Cray supercomputer to help them design the next Mac.</strong></p>
+          <p><em>"Your Highness, I have no need of this hypothesis."</em> - <strong>Pierre Laplace (1749-1827), to Napoleon on why his works on celestial mechanics make no mention of God.</strong></p>
+          <p><em>"I choose a block of marble and chop off whatever I don't need."</em> - <strong>Francois-Auguste Rodin (1840-1917), when asked how he managed to make his remarkable statues</strong></p>
+          <p><em>"The man who does not read good books has no advantage over the man who cannot read them."</em> - <strong>Mark Twain (1835-1910)</strong></p>
+          <p><em>"The truth is more important than the facts."</em> - <strong>Frank Lloyd Wright (1868-1959)</strong></p>
+          <p><em>"Research is what I'm doing when I don't know what I'm doing."</em> - <strong>Wernher Von Braun (1912-1977)</strong></p>
+          <p><em>"There are only two tragedies in life: one is not getting what one wants, and the other is getting it."</em> - <strong>Oscar Wilde (1854-1900)</strong></p>
+          <p><em>"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle."</em> - <strong>Albert Einstein (1879-1955)</strong></p>
+        </div>
+      </div>
+
+      <div class="span4">
+        <h3>US State Capitals</h2>
         <div id="capitals">
-          <table class="table table-hover table-bordered sieve">
+          <table class="table table-hover table-bordered table-sieve">
             <thead>
               <tr>
                 <th>State</th>
@@ -136,7 +474,9 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="jquery.sieve.js" type="text/javascript"></script>
   <script>
-    $(".sieve").sieve({ searchTemplate: "<div class='form-inline'><label style='float: right;'>Search: <input type='text'></label></div>" });
+    var searchTemplate = "<div class='row form-inline'><label style='float: right;'>Search: <input type='text'></label></div>"
+    $(".table-sieve").sieve({ searchTemplate: searchTemplate });
+    $(".p-sieve").sieve({ searchTemplate: searchTemplate, rowSelector: "p" });
   </script>
 </body>
 </html>
