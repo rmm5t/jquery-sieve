@@ -2,7 +2,7 @@
 
 /*
 Table Filtering and Search for jQuery
-version: 0.1.1
+version: 0.2.0
 
 Licensed under the MIT:
 http://www.opensource.org/licenses/mit-license.php
@@ -35,8 +35,8 @@ Copyright 2013 Ryan McGeary
       settings = $.extend({
         searchInput: null,
         searchTemplate: "<div><label>Search: <input type='text'></label></div>",
-        rowSelector: "tr:not(:has('th'))",
-        cellSelector: "td"
+        rowSelector: "tbody tr",
+        cellSelector: null
       }, options);
       if (!settings.searchInput) {
         searchBar = $(settings.searchTemplate);
@@ -50,8 +50,12 @@ Copyright 2013 Ryan McGeary
         return rows.each(function() {
           var cells, matches, q, row, text, _i, _len;
           row = $(this);
-          cells = row.find(settings.cellSelector);
-          text = cells.text().toLowerCase();
+          if (settings.cellSelector) {
+            cells = row.find(settings.cellSelector);
+            text = cells.text().toLowerCase();
+          } else {
+            text = row.text().toLowerCase();
+          }
           matches = true;
           for (_i = 0, _len = query.length; _i < _len; _i++) {
             q = query[_i];
