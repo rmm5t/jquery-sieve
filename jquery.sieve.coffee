@@ -1,5 +1,5 @@
 ###
-Table Filtering and Search for jQuery
+Table and Container Filtering and Search for jQuery
 version: 0.2.0
 
 Licensed under the MIT:
@@ -12,27 +12,27 @@ $.fn.sieve = (options) ->
   compact = (array) -> item for item in array when item
 
   this.each ->
-    table = $(this)
+    container = $(this)
     settings = $.extend({
       searchInput: null
       searchTemplate: "<div><label>Search: <input type='text'></label></div>"
-      rowSelector: "tbody tr"
-      cellSelector: null
+      itemSelector: "tbody tr"
+      textSelector: null
     }, options)
 
     if !settings.searchInput
       searchBar = $(settings.searchTemplate)
       settings.searchInput = searchBar.find("input")
-      table.before(searchBar)
+      container.before(searchBar)
 
     settings.searchInput.on "keyup", ->
       query = compact($(this).val().toLowerCase().split(/\s+/))
-      rows = table.find(settings.rowSelector)
+      rows = container.find(settings.itemSelector)
 
       rows.each ->
         row = $(this)
-        if settings.cellSelector
-          cells = row.find(settings.cellSelector)
+        if settings.textSelector
+          cells = row.find(settings.textSelector)
           text = cells.text().toLowerCase()
         else
           text = row.text().toLowerCase()
