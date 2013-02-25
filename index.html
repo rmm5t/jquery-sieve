@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>jquery.sieve demo</title>
+  <title>Sieve jQuery Plugin</title>
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>jquery.sieve demo</h1>
+
+    <h1>Sieve jQuery Plugin</h1>
     <p>
       This page demonstrates the basic functionality of
-      the <a href="https://github.com/rmm5t/jquery-sieve" tabindex="-1">Sieve
-      jQuery plugin</a>. Start typing in one of the search fields to filter
-      the associated datasets.
+      the <a href="https://github.com/rmm5t/jquery-sieve"
+      tabindex="-1"><strong>Sieve jQuery plugin</strong></a>. Sieve allows you
+      to quickly add an interactive search filter to any block of content.
     </p>
+    <p>
+      <a href="jquery.sieve.js" tabindex="-1"><strong>Download</strong></a>,
+      view the examples, and enjoy.
+    </p>
+
+    <h2>Usage</h2>
+    <div class="row">
+      <div class="span6">
+        <p>
+          In the simplest case, you can add a search filter to any table. By default, this
+          example will filter all rows in the <code>&lt;tbody&gt;</code>
+          section of a <code>&lt;table class="sieve"&gt;</code>.
+        </p>
+
+        <pre>
+$(document).ready(function() {
+  $("table.sieve").sieve();
+}); </pre>
+      </div>
+      <div class="span6">
+        <p>
+          To filter a list of paragraphs, override
+          the <code>itemSelector</code> option. This example will filter
+          all <code>&ltp&gt;</code> elements within
+          the <code>&lt;section class="sieve"&gt;</code> container.
+        </p>
+
+        <pre>
+$(document).ready(function() {
+  $("section.sieve").sieve({ itemSelector: "p" });
+}); </pre>
+      </div>
+    </div>
+    <p>In either case, Sieve will insert a search box before the content
+    container and act as an interactive search filter for the content.</p>
+
+
+    <h2>Demos</h2>
+    <p>
+      Start typing in one of the search fields to filter the associated
+      datasets.
+    </p>
+
     <div class="row">
       <div class="span4">
-        <h3>US President Birthplaces</h2>
+        <h4>US President Birthplaces</h4>
         <div id="presidents">
           <table class="table table-hover table-bordered table-sieve">
             <thead>
@@ -74,7 +118,7 @@
       </div>
 
       <div class="span4">
-        <h3>Good Quotes <small>[<a href="http://www.cs.virginia.edu/~robins/quotes.html" tabindex="-1">source</a>]</small></h2>
+        <h4>Good Quotes <small>[<a href="http://www.cs.virginia.edu/~robins/quotes.html" tabindex="-1">source</a>]</small></h4>
         <div id="paragraphs" class="p-sieve">
           <p><em>"Moral indignation is jealousy with a halo."</em> - <strong>H. G. Wells (1866-1946)</strong></p>
           <p><em>"Glory is fleeting, but obscurity is forever."</em> - <strong>Napoleon Bonaparte (1769-1821)</strong></p>
@@ -404,7 +448,7 @@
       </div>
 
       <div class="span4">
-        <h3>US State Capitals</h2>
+        <h4>US State Capitals</h4>
         <div id="capitals">
           <table class="table table-hover table-bordered table-sieve">
             <thead>
