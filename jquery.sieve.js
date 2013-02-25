@@ -43,7 +43,7 @@ Copyright 2013 Ryan McGeary
         settings.searchInput = searchBar.find("input");
         container.before(searchBar);
       }
-      return settings.searchInput.on("keyup", function() {
+      return settings.searchInput.on("keyup change", function() {
         var query, rows;
         query = compact($(this).val().toLowerCase().split(/\s+/));
         rows = container.find(settings.itemSelector);
