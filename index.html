@@ -518,8 +518,9 @@ $(document).ready(function() {
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="jquery.sieve.js" type="text/javascript"></script>
   <script>
-    var searchTemplate = "<div class='row form-inline'><label style='float: right;'>Search: <input type='text'></label></div>"
+    var searchTemplate = "<div class='row form-inline'><label style='float: right;'>Search: <input type='text' placeholder='(start typing)'></label></div>"
     $(".table-sieve").sieve({ searchTemplate: searchTemplate });
+    searchTemplate = "<div class='row form-inline'><label style='float: right;'>Find a Quote: <input type='text' placeholder='(try typing &quot;einstein&quot;)'></label></div>"
     $(".p-sieve").sieve({ searchTemplate: searchTemplate, itemSelector: "p" });
   </script>
 
