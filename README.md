@@ -28,6 +28,10 @@ $(document).ready(function() {
 
 In either case, Sieve will insert a search box before the content container and act as an interactive search filter for the content.
 
+## Contributing
+
+See the [**contributing guidelines**](CONTRIBUTING.md).
+
 ## Author
 
 [Ryan McGeary](http://ryan.mcgeary.org) ([@rmm5t](http://twitter.com/rmm5t))
