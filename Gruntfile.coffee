@@ -1,10 +1,11 @@
-shell = require 'shelljs'
 module.exports = (grunt) ->
+  pkgFile = 'sieve.jquery.json'
+  pkg = grunt.file.readJSON pkgFile
 
   # Project configuration.
   grunt.initConfig
     # Metadata.
-    pkg: grunt.file.readJSON 'sieve.jquery.json'
+    pkg: pkg
     basename: 'jquery.<%= pkg.name %>'
     headline: '<%= pkg.title || pkg.name %> v<%= pkg.version %>'
     copyright: '<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>'
@@ -76,7 +77,20 @@ module.exports = (grunt) ->
   grunt.registerTask 'test', ['qunit']
   grunt.registerTask 'default', ['clean', 'build', 'test']
 
-  grunt.registerTask 'release', (type) ->
+  grunt.registerTask 'bump', (type) ->
+    oldVersion = pkg.version
+    pkg.version = versionBump(oldVersion, type)
+    grunt.log.write('Bumping version to ' + pkg.version);
+    grunt.file.write(pkgFile, JSON.stringify(pkg, null, '  ') + '\n')
+    grunt.log.ok()
+    grunt.task.run('default', 'commit');
+
+  grunt.registerTask "commit", ->
+    run "git add ."
+    run "git commit -m 'Bumped version to v#{pkg.version}'"
+    grunt.log.subhead("DON'T FORGET TO `grunt release`")
+
+  grunt.registerTask 'release', 'Tag and publish a new release.', ->
     version = grunt.config("pkg.version")
     run "git rebase master gh-pages"
     run "git checkout master"
@@ -85,6 +99,7 @@ module.exports = (grunt) ->
     run "git push origin gh-pages"
     run "git push --tags"
 
+  shell = require 'shelljs'
   run = (command) ->
     grunt.log.write "Running `#{command}`..."
     p = shell.exec(command, silent: true)
@@ -94,3 +109,13 @@ module.exports = (grunt) ->
       grunt.log.error()
       grunt.log.error(p.output)
       grunt.warn "Non-zero exit code for `#{command}`."
+
+  versionBump = (version, versionType) ->
+    type = major: 0, minor: 1, patch: 2
+    parts = version.split('.')
+    idx = type[versionType || 'patch']
+
+    parts[idx] = parseInt(parts[idx], 10) + 1
+    while ++idx < parts.length
+      parts[idx] = 0
+    return parts.join('.')
