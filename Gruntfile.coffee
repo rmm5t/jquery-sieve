@@ -77,15 +77,15 @@ module.exports = (grunt) ->
   grunt.registerTask 'test', ['qunit']
   grunt.registerTask 'default', ['clean', 'build', 'test']
 
-  grunt.registerTask 'bump', (type) ->
+  grunt.registerTask 'bump', 'Bump, build, and commit the next version.', (type) ->
     oldVersion = pkg.version
     pkg.version = versionBump(oldVersion, type)
     grunt.log.write('Bumping version to ' + pkg.version);
     grunt.file.write(pkgFile, JSON.stringify(pkg, null, '  ') + '\n')
     grunt.log.ok()
-    grunt.task.run('default', 'commit');
+    grunt.task.run('default', 'commitBump');
 
-  grunt.registerTask "commit", ->
+  grunt.registerTask "commitBump", 'Add and commit all bumped version changes.', ->
     run "git add ."
     run "git commit -m 'Bumped version to v#{pkg.version}'"
     grunt.log.subhead("DON'T FORGET TO `grunt release`")
