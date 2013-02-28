@@ -27,8 +27,8 @@ module.exports = (grunt) ->
         src: 'src/**/*.coffee'
         dest: 'dist/<%= basename %>.js'
       test:
-        src: 'test/sieve_test.coffee'
-        dest: 'test/compiled/sieve_test.js'
+        src: 'test/*.coffee'
+        dest: 'test/compiled/test.js'
 
     uglify:
       dist:
