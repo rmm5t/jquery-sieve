@@ -50,7 +50,7 @@ module.exports = (grunt) ->
     watch:
       src:
         files: '<%= coffee.compile.src %>'
-        tasks: ['build', 'qunit']
+        tasks: ['compile', 'qunit']
       test:
         files: '<%= coffee.test.src %>'
         tasks: ['coffee:test', 'qunit']
@@ -72,5 +72,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-text-replace')
 
-  grunt.registerTask('build', ['coffee', 'uglify', 'concat', 'replace'])
-  grunt.registerTask('default', ['clean', 'build', 'qunit'])
+  grunt.registerTask('compile', ['coffee', 'uglify', 'concat'])
+  grunt.registerTask('build', ['compile', 'replace'])
+  grunt.registerTask('test', ['qunit'])
+  grunt.registerTask('default', ['clean', 'build', 'test'])
