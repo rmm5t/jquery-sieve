@@ -4,9 +4,6 @@
   <meta charset="utf-8">
   <title>Sieve Test Suite</title>
   <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.11.0.css" media="screen">
-  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
-       you REALLY want to mess around with jQuery in the console. REMEMBER WE
-       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
 </head>
 <body>
   <div id="qunit"></div>
@@ -15,6 +12,8 @@
   <script src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
   <script src="../dist/jquery.sieve.min.js"></script>
   <script src="compiled/test.js"></script>
+  <!-- Removing access to jQuery and $. Replacing it with _$ for console debug
+       access. THIS HELPS ENSURE BEST PRACTICES. -->
   <script>window._$ = jQuery.noConflict(true);</script>
 </body>
 </html>
