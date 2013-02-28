@@ -61,6 +61,14 @@ module.exports = (grunt) ->
         files: '<%= jshint.test.src %>'
         tasks: ['jshint:test', 'qunit']
 
+    replace:
+      site:
+        src: ['index.html']
+        overwrite: true
+        replacements: [
+          { from: /v[0-9]+\.[0-9]+\.[0-9]+/g, to: 'v<%= pkg.version %>' }
+        ]
+
   # These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-concat')
@@ -69,6 +77,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-jshint')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-text-replace')
 
-  grunt.registerTask('build', ['coffee', 'uglify', 'concat'])
+  grunt.registerTask('build', ['coffee', 'uglify', 'concat', 'replace'])
   grunt.registerTask('default', ['jshint', 'clean', 'build', 'qunit'])
