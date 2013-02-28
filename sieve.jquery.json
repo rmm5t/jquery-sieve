@@ -31,7 +31,7 @@
   "homepage": "http://rmm5t.github.com/jquery-sieve/",
   "docs": "https://github.com/rmm5t/jquery-sieve",
   "demo": "http://rmm5t.github.com/jquery-sieve/",
-  "download": "http://rmm5t.github.com/jquery-sieve/jquery.sieve.js",
+  "download": "http://rmm5t.github.com/jquery-sieve/dist/jquery.sieve.min.js",
   "bugs": "https://github.com/rmm5t/jquery-sieve/issues",
   "maintainers": []
 }
