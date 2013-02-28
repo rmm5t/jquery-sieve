@@ -1,9 +1,10 @@
+shell = require 'shelljs'
 module.exports = (grunt) ->
 
   # Project configuration.
   grunt.initConfig
     # Metadata.
-    pkg: grunt.file.readJSON('sieve.jquery.json')
+    pkg: grunt.file.readJSON 'sieve.jquery.json'
     basename: 'jquery.<%= pkg.name %>'
     headline: '<%= pkg.title || pkg.name %> v<%= pkg.version %>'
     copyright: '<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>'
@@ -62,15 +63,34 @@ module.exports = (grunt) ->
         ]
 
   # These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-concat')
-  grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.loadNpmTasks('grunt-contrib-qunit')
-  grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-contrib-coffee')
-  grunt.loadNpmTasks('grunt-text-replace')
+  grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-contrib-qunit'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-text-replace'
 
-  grunt.registerTask('compile', ['coffee', 'uglify', 'concat'])
-  grunt.registerTask('build', ['compile', 'replace'])
-  grunt.registerTask('test', ['qunit'])
-  grunt.registerTask('default', ['clean', 'build', 'test'])
+  grunt.registerTask 'compile', ['coffee', 'uglify', 'concat']
+  grunt.registerTask 'build', ['compile', 'replace']
+  grunt.registerTask 'test', ['qunit']
+  grunt.registerTask 'default', ['clean', 'build', 'test']
+
+  grunt.registerTask 'release', (type) ->
+    version = grunt.config("pkg.version")
+    run "git rebase master gh-pages"
+    run "git checkout master"
+    run "git tag v#{version}"
+    run "git push origin master"
+    run "git push origin gh-pages"
+    run "git push --tags"
+
+  run = (command) ->
+    grunt.log.write "Running `#{command}`..."
+    p = shell.exec(command, silent: true)
+    if p.code == 0
+      grunt.log.ok()
+    else
+      grunt.log.error()
+      grunt.log.error(p.output)
+      grunt.warn "Non-zero exit code for `#{command}`."
