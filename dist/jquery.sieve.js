@@ -3,8 +3,12 @@
  * http://rmm5t.github.com/jquery-sieve/
  * Copyright (c) 2013 Ryan McGeary; Licensed MIT
  */
-(function($) {
-  return $.fn.sieve = function(options) {
+(function() {
+  var $;
+
+  $ = jQuery;
+
+  $.fn.sieve = function(options) {
     var compact;
     compact = function(array) {
       var item, _i, _len, _results;
@@ -54,4 +58,5 @@
       });
     });
   };
-})(jQuery);
+
+}).call(this);

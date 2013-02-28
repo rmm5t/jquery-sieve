@@ -21,8 +21,6 @@ module.exports = (grunt) ->
       files: ['dist', 'test/compiled']
 
     coffee:
-      options:
-        bare: true
       compile:
         src: 'src/**/*.coffee'
         dest: 'dist/<%= basename %>.js'
