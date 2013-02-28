@@ -1,7 +1,7 @@
 /*!
- * jQuery Sieve - v0.2.2 - 2013-02-27
+ * jQuery Sieve v0.2.2 (2013-02-27)
  * http://rmm5t.github.com/jquery-sieve/
- * Copyright (c) 2013 Ryan McGeary; Licensed MIT 
+ * Copyright (c) 2013 Ryan McGeary; Licensed MIT
  */
 (function($) {
   return $.fn.sieve = function(options) {
