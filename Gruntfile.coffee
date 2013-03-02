@@ -90,14 +90,19 @@ module.exports = (grunt) ->
     run "git commit -m 'Bumped version to v#{pkg.version}'"
     grunt.log.subhead("DON'T FORGET TO `grunt release`")
 
-  grunt.registerTask 'release', 'Tag and publish a new release.', ->
+  grunt.registerTask 'release', ['tag', 'push', 'publish']
+
+  grunt.registerTask 'tag', "Tag a new release", ->
     version = grunt.config("pkg.version")
-    run "git rebase master gh-pages"
     run "git checkout master"
     run "git tag v#{version}"
-    run "git push origin master"
-    run "git push origin gh-pages"
+
+  grunt.registerTask 'push', "Push tags", ->
+    run "git push origin master:master"
     run "git push --tags"
+
+  grunt.registerTask 'publish', "Publish docs for the current release", ->
+    run "git push origin master:gh-pages"
 
   shell = require 'shelljs'
   run = (command) ->
