@@ -14,6 +14,8 @@ $.fn.sieve = (options) ->
       searchTemplate: "<div><label>Search: <input type='text'></label></div>"
       itemSelector: "tbody tr"
       textSelector: null
+      toggle: (item, match) -> item.toggle(match)
+      complete: ->
     }, options)
 
     if !settings.searchInput
@@ -23,19 +25,20 @@ $.fn.sieve = (options) ->
 
     settings.searchInput.on "keyup.sieve change.sieve", ->
       query = compact($(this).val().toLowerCase().split(/\s+/))
-      rows = container.find(settings.itemSelector)
+      items = container.find(settings.itemSelector)
 
-      rows.each ->
-        row = $(this)
+      items.each ->
+        item = $(this)
         if settings.textSelector
-          cells = row.find(settings.textSelector)
+          cells = item.find(settings.textSelector)
           text = cells.text().toLowerCase()
         else
-          text = row.text().toLowerCase()
+          text = item.text().toLowerCase()
 
-        matches = true
-
+        match = true
         for q in query
-          matches &&= text.indexOf(q) >= 0
+          match &&= text.indexOf(q) >= 0
 
-        row.toggle(matches)
+        settings.toggle(item, match)
+
+      settings.complete()

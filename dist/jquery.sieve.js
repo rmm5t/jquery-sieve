@@ -1,5 +1,5 @@
 /*!
- * jQuery Sieve v0.2.5 (2013-02-28)
+ * jQuery Sieve v0.3.0-pre (2013-03-05)
  * http://rmm5t.github.com/jquery-sieve/
  * Copyright (c) 2013 Ryan McGeary; Licensed MIT
  */
@@ -28,7 +28,11 @@
         searchInput: null,
         searchTemplate: "<div><label>Search: <input type='text'></label></div>",
         itemSelector: "tbody tr",
-        textSelector: null
+        textSelector: null,
+        toggle: function(item, match) {
+          return item.toggle(match);
+        },
+        complete: function() {}
       }, options);
       if (!settings.searchInput) {
         searchBar = $(settings.searchTemplate);
@@ -36,25 +40,26 @@
         container.before(searchBar);
       }
       return settings.searchInput.on("keyup.sieve change.sieve", function() {
-        var query, rows;
+        var items, query;
         query = compact($(this).val().toLowerCase().split(/\s+/));
-        rows = container.find(settings.itemSelector);
-        return rows.each(function() {
-          var cells, matches, q, row, text, _i, _len;
-          row = $(this);
+        items = container.find(settings.itemSelector);
+        items.each(function() {
+          var cells, item, match, q, text, _i, _len;
+          item = $(this);
           if (settings.textSelector) {
-            cells = row.find(settings.textSelector);
+            cells = item.find(settings.textSelector);
             text = cells.text().toLowerCase();
           } else {
-            text = row.text().toLowerCase();
+            text = item.text().toLowerCase();
           }
-          matches = true;
+          match = true;
           for (_i = 0, _len = query.length; _i < _len; _i++) {
             q = query[_i];
-            matches && (matches = text.indexOf(q) >= 0);
+            match && (match = text.indexOf(q) >= 0);
           }
-          return row.toggle(matches);
+          return settings.toggle(item, match);
         });
+        return settings.complete();
       });
     });
   };
