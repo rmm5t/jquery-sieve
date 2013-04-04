@@ -60,7 +60,7 @@ module.exports = (grunt) ->
         src: ['index.html']
         overwrite: true
         replacements: [
-          { from: /v[0-9]+\.[0-9]+\.[0-9]+/g, to: 'v<%= pkg.version %>' }
+          { from: /v[0-9]+\.[0-9]+\.[0-9]+(-\w+)?/g, to: 'v<%= pkg.version %>' }
         ]
 
   # These plugins provide necessary tasks.
