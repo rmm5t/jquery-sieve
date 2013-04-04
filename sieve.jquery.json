@@ -2,7 +2,7 @@
   "name": "sieve",
   "title": "jQuery Sieve",
   "description": "jQuery plugin that allows you to quickly add an interactive search filter to any block of content.",
-  "version": "0.3.0-pre",
+  "version": "0.3.0",
   "author": {
     "name": "Ryan McGeary",
     "email": "ryan@mcgeary.org",

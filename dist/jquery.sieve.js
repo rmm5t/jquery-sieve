@@ -1,5 +1,5 @@
 /*!
- * jQuery Sieve v0.3.0-pre (2013-03-05)
+ * jQuery Sieve v0.3.0 (2013-04-04)
  * http://rmm5t.github.com/jquery-sieve/
  * Copyright (c) 2013 Ryan McGeary; Licensed MIT
  */
