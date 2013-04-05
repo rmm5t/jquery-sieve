@@ -2,7 +2,7 @@
 
 Sieve allows you to quickly add an interactive search filter to any block of content.
 
-[**View the Demo**](http://rmm5t.github.com/jquery-sieve/)
+[**View the Demo**](http://rmm5t.github.io/jquery-sieve/)
 
 ## Usage
 

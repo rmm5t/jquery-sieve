@@ -28,10 +28,10 @@
     "text",
     "index"
   ],
-  "homepage": "http://rmm5t.github.com/jquery-sieve/",
+  "homepage": "http://rmm5t.github.io/jquery-sieve/",
   "docs": "https://github.com/rmm5t/jquery-sieve",
-  "demo": "http://rmm5t.github.com/jquery-sieve/",
-  "download": "http://rmm5t.github.com/jquery-sieve/dist/jquery.sieve.min.js",
+  "demo": "http://rmm5t.github.io/jquery-sieve/",
+  "download": "http://rmm5t.github.io/jquery-sieve/dist/jquery.sieve.min.js",
   "bugs": "https://github.com/rmm5t/jquery-sieve/issues",
   "maintainers": []
 }
