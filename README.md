@@ -4,6 +4,8 @@ Sieve allows you to quickly add an interactive search filter to any block of con
 
 [**View the Demo**](http://rmm5t.github.io/jquery-sieve/)
 
+**Please donate some Bitcoin**: `1Pt7aYfm9YxHCMuoJnFi88yHVYMAy4CEBZ`
+
 ## Usage
 
 In the simplest case, you can add a search filter to any table. By default,
