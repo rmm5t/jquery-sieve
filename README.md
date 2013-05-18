@@ -6,8 +6,8 @@ Sieve allows you to quickly add an interactive search filter to any block of con
 
 **If you like this project, please help by donating.**
 
-* Donate via Gittip: https://www.gittip.com/rmm5t/
-* Donate via Bitcoin: `1Pt7aYfm9YxHCMuoJnFi88yHVYMAy4CEBZ`
+* Gittip: https://www.gittip.com/rmm5t/
+* Bitcoin: `1wzBnMjWVZfpiFMc5i2nzKT7sCBaZNfLK`
 
 ## Usage
 
