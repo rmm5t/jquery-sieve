@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sieve jQuery Plugin</title>
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@
       <div class="pull-right text-right">
         <a href="https://github.com/rmm5t/jquery-sieve"><span class="label label-info"><i class="fa fa-fw fa-github-alt"></i> Fork on GitHub</span></a>
         <a href="http://plugins.jquery.com/sieve/"><span class="label label-info"><i class="fa fa-fw fa-external-link"></i> View on Plugin Registry</span></a>
-        <span class="label label-inverse">v0.3.0</span>
+        <span class="label label-default">v0.3.0</span>
       </div>
       <h1>
         Sieve jQuery Plugin
@@ -20,7 +20,7 @@
       </h1>
     </div>
     <div class="row">
-      <div class="span6">
+      <div class="col-md-6">
         <p>
           This page demonstrates the basic functionality of
           the <a href="https://github.com/rmm5t/jquery-sieve"><strong>Sieve jQuery
@@ -29,7 +29,7 @@
         </p>
         <p>Download, view the examples, and enjoy!</p>
       </div>
-      <div class="span6">
+      <div class="col-md-6">
         <p><a href="dist/jquery.sieve.js" class="btn btn-primary"><i class="fa fa-fw fa-cloud-download"></i> Download Uncompressed</a></p>
         <p><a href="dist/jquery.sieve.min.js" class="btn btn-primary"><i class="fa fa-fw fa-cloud-download"></i> Download Minified</a></p>
       </div>
@@ -37,7 +37,7 @@
 
     <h2>Usage</h2>
     <div class="row">
-      <div class="span6">
+      <div class="col-md-6">
         <p>
           In the simplest case, you can add a search filter to any table. By default, this
           example will filter all rows in the <code>&lt;tbody&gt;</code>
@@ -49,7 +49,7 @@ $(document).ready(function() {
   $("table.sieve").sieve();
 }); </pre>
       </div>
-      <div class="span6">
+      <div class="col-md-6">
         <p>
           To filter a list of paragraphs, override
           the <code>itemSelector</code> option. This example will filter
@@ -74,7 +74,7 @@ $(document).ready(function() {
     </p>
 
     <div class="row">
-      <div class="span4">
+      <div class="col-md-4">
         <h4>US President Birthplaces</h4>
         <div id="presidents">
           <table class="table table-hover table-bordered table-sieve">
@@ -133,7 +133,7 @@ $(document).ready(function() {
         </div>
       </div>
 
-      <div class="span4">
+      <div class="col-md-4">
         <h4>Good Quotes <small>[<a href="http://www.cs.virginia.edu/~robins/quotes.html" tabindex="-1">source</a>]</small></h4>
         <div id="paragraphs" class="p-sieve">
           <p><em>"Moral indignation is jealousy with a halo."</em> - <strong>H. G. Wells (1866-1946)</strong></p>
@@ -463,7 +463,7 @@ $(document).ready(function() {
         </div>
       </div>
 
-      <div class="span4">
+      <div class="col-md-4">
         <h4>US State Capitals</h4>
         <div id="capitals">
           <table class="table table-hover table-bordered table-sieve">
@@ -534,9 +534,9 @@ $(document).ready(function() {
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="dist/jquery.sieve.min.js" type="text/javascript"></script>
   <script>
-    var searchTemplate = "<div class='row-fluid form-inline'><label style='float: right;'>Search: <input type='text' placeholder='(start typing)'></label></div>"
+    var searchTemplate = "<div class='row form-inline'><label style='float: right;'>Search: <input type='text' class='form-control' placeholder='(start typing)'></label></div>"
     $(".table-sieve").sieve({ searchTemplate: searchTemplate });
-    searchTemplate = "<div class='row-fluid form-inline'><label style='float: right;'>Find a Quote: <input type='text' placeholder='(try typing &quot;einstein&quot;)'></label></div>"
+    searchTemplate = "<div class='row form-inline'><label style='float: right;'>Find a Quote: <input type='text' class='form-control' placeholder='(try typing &quot;einstein&quot;)'></label></div>"
     $(".p-sieve").sieve({ searchTemplate: searchTemplate, itemSelector: "p" });
   </script>
 
