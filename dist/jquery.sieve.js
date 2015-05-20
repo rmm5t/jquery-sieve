@@ -1,7 +1,7 @@
 /*!
- * jQuery Sieve v0.3.0 (2013-04-04)
+ * jQuery Sieve v0.3.1 (2015-05-20)
  * http://rmm5t.github.io/jquery-sieve/
- * Copyright (c) 2013 Ryan McGeary; Licensed MIT
+ * Copyright (c) 2015 Ryan McGeary; Licensed MIT
  */
 (function() {
   var $;
@@ -59,7 +59,7 @@
           }
           return settings.toggle(item, match);
         });
-        return settings.complete();
+        return settings.complete(items, container);
       });
     });
   };

@@ -41,4 +41,4 @@ $.fn.sieve = (options) ->
 
         settings.toggle(item, match)
 
-      settings.complete()
+      settings.complete(items, container)
