@@ -1,5 +1,5 @@
 /*!
- * jQuery Sieve v0.3.1 (2015-05-20)
+ * jQuery Sieve v0.3.3 (2015-05-20)
  * http://rmm5t.github.io/jquery-sieve/
  * Copyright (c) 2015 Ryan McGeary; Licensed MIT
  */
@@ -32,12 +32,16 @@
         toggle: function(item, match) {
           return item.toggle(match);
         },
-        complete: function() {}
+        complete: function() {},
+        onLoad: function() {}
       }, options);
       if (!settings.searchInput) {
         searchBar = $(settings.searchTemplate);
         settings.searchInput = searchBar.find("input");
         container.before(searchBar);
+        if (typeof settings.onLoad === "function") {
+          settings.onLoad(container);
+        }
       }
       return settings.searchInput.on("keyup.sieve change.sieve", function() {
         var items, query;

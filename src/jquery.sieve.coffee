@@ -16,12 +16,14 @@ $.fn.sieve = (options) ->
       textSelector: null
       toggle: (item, match) -> item.toggle(match)
       complete: ->
+      onLoad: ->
     }, options)
 
     if !settings.searchInput
       searchBar = $(settings.searchTemplate)
       settings.searchInput = searchBar.find("input")
       container.before(searchBar)
+      settings.onLoad?(container)
 
     settings.searchInput.on "keyup.sieve change.sieve", ->
       query = compact($(this).val().toLowerCase().split(/\s+/))
