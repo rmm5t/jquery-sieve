@@ -39,9 +39,9 @@
         searchBar = $(settings.searchTemplate);
         settings.searchInput = searchBar.find("input");
         container.before(searchBar);
-        if (typeof settings.onLoad === "function") {
-          settings.onLoad(container);
-        }
+      }
+      if (typeof settings.onLoad === "function") {
+        settings.onLoad(container);
       }
       return settings.searchInput.on("keyup.sieve change.sieve", function() {
         var items, query;

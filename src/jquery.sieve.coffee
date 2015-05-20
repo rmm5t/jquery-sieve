@@ -23,8 +23,9 @@ $.fn.sieve = (options) ->
       searchBar = $(settings.searchTemplate)
       settings.searchInput = searchBar.find("input")
       container.before(searchBar)
-      settings.onLoad?(container)
 
+    settings.onLoad?(container)
+    
     settings.searchInput.on "keyup.sieve change.sieve", ->
       query = compact($(this).val().toLowerCase().split(/\s+/))
       items = container.find(settings.itemSelector)
