@@ -101,9 +101,6 @@ module.exports = (grunt) ->
     run "git push origin master:master"
     run "git push --tags"
 
-  grunt.registerTask 'publish', "Publish docs for the current release", ->
-    run "git push origin master:gh-pages"
-
   shell = require 'shelljs'
   run = (command) ->
     grunt.log.write "Running `#{command}`..."
