@@ -57,4 +57,4 @@ See the [**contributing guidelines**](CONTRIBUTING.md).
 
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
 
-Copyright (c) 2013, Ryan McGeary (ryan -[at]- mcgeary [*dot*] org)
+Copyright (c) 2013-2017, Ryan McGeary (ryan -[at]- mcgeary [*dot*] org)

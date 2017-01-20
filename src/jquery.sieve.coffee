@@ -1,7 +1,7 @@
 ###
 jQuery Sieve
 Table and Container Filtering and Search for jQuery
-Copyright (c) 2013 Ryan McGeary; Licensed MIT
+Copyright (c) 2013-2017 Ryan McGeary; Licensed MIT
 ###
 $ = jQuery
 $.fn.sieve = (options) ->
